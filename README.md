@@ -43,3 +43,13 @@ flowchart LR
 当前 BM25 在每次查询扫描全部块，适合小知识库，不适合大规模生产；仅支持 UTF-8 Markdown。拒答基于无词法重叠，存在弱相关误召回风险；生成模式的引用与事实一致性未自动验证。后续可增加混合检索、rerank、引用核对和独立评估集。
 
 参阅 [开发与排障文档](docs/design.md)。
+
+## 业务案例与流程图
+
+新增 4 个可复现验收案例，包含操作步骤、预期结果、实际输出和流程图。
+
+- [案例验收与流程图](docs/business-cases.md)
+- [原始运行结果](examples/results.json)
+- [可编辑流程图源文件](docs/flowchart.mmd)
+
+案例使用模拟业务数据，实际运行 CLI/SQLite 或 Java HTTP/H2，没有调用真实模型。GitHub Actions 会自动执行案例脚本。

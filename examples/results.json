@@ -1,0 +1,53 @@
+{
+  "data_origin": "synthetic business scenarios; executed against actual CLI and SQLite",
+  "mode": "extractive; no live model request",
+  "passed": 4,
+  "total": 4,
+  "cases": [
+    {
+      "id": "RAG-01",
+      "title": "商城接口 503，定位故障处理文档并返回引用",
+      "passed": true,
+      "evidence": {
+        "imported_chunks": 3,
+        "question": "商城接口返回 503，如何排查上游服务？",
+        "top_source": "deployment.md",
+        "chunk": 0,
+        "answer": "[1] # 部署故障排查\n服务启动失败时，先检查 JAVA_HOME 和端口占用，再检查数据库连接与环境变量。\n接口返回 503 表示上游服务不可用，应检查连接超时、依赖健康状态和服务日志。\n发布流程：运行自动化测试，构建镜像，在测试环境验证健康检查，然后执行发布。\n回滚流程：保留上一个镜像标签，切回上一版本，并验证健康检查与数据库兼容性。\n\n[2] # 数据库查询规范\nSQL 查询必须使用参数绑定，禁止把用户输入直接拼接进 SQL。\n分页查询必须设置最大页大小并使用稳定排序。大数据量深分页应考虑游标分页。\n慢查询排查：使用 EXPLAIN 检查执行计划，检查索引命中、扫描行数与排序开销。\n数据库连接池耗尽时，检查连接泄漏、长事务与慢查询，合理设置超时和池容量。",
+        "mode": "extractive"
+      }
+    },
+    {
+      "id": "RAG-02",
+      "title": "发布手册改版与撤回，清除过期知识",
+      "passed": true,
+      "evidence": {
+        "before_source": "release.md",
+        "old_tag_after_update": [],
+        "new_tag_before_delete": "release.md",
+        "new_tag_after_delete": []
+      }
+    },
+    {
+      "id": "RAG-03",
+      "title": "运维知识库缺少人事制度，返回无依据",
+      "passed": true,
+      "evidence": {
+        "question": "公司婚假天数是多少？",
+        "mode": "extractive",
+        "answer": "知识库中没有匹配依据，请补充文档或更具体的问题。",
+        "sources": []
+      }
+    },
+    {
+      "id": "RAG-04",
+      "title": "查询文本含 SQL 攻击字符，知识库仍可查询",
+      "passed": true,
+      "evidence": {
+        "payload": "'; DROP TABLE chunks; --",
+        "chunks_after_payload": 3,
+        "followup_top_source": "database.md"
+      }
+    }
+  ]
+}

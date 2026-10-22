@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1290" viewBox="0 0 1200 1290" role="img"><title>知识库 RAG 助手</title><desc>实测路径：Markdown → BM25 → 原文引用；live 生成未验证</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#586b87"/></marker></defs>
+<rect width="1200" height="1290" fill="#f5f7fb"/>
+<text x="60" y="76" fill="#18273f" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="34" text-anchor="start">知识库 RAG 助手</text>
+<text x="60" y="120" fill="#586b87" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="start">实测路径：Markdown → BM25 → 原文引用；live 生成未验证</text>
+<rect x="100" y="160" width="620" height="82" rx="14" fill="#eaf0ff" stroke="#a9badc" stroke-width="2"/>
+<text x="410.0" y="208.0" fill="#18273f" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle">导入 Markdown 文档</text>
+<rect x="100" y="290" width="620" height="82" rx="14" fill="#eaf0ff" stroke="#a9badc" stroke-width="2"/>
+<text x="410.0" y="338.0" fill="#18273f" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle">每块 500 字符，重叠 80 字符</text>
+<rect x="100" y="420" width="620" height="82" rx="14" fill="#eaf0ff" stroke="#a9badc" stroke-width="2"/>
+<text x="410.0" y="468.0" fill="#18273f" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle">SQLite 事务替换知识快照</text>
+<rect x="100" y="550" width="620" height="82" rx="14" fill="#eaf0ff" stroke="#a9badc" stroke-width="2"/>
+<text x="410.0" y="598.0" fill="#18273f" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle">输入问题 → 中文二元词 / 英文词 BM25</text>
+<polyline points="410,242 410,290" fill="none" stroke="#586b87" stroke-width="3" marker-end="url(#arrow)"/>
+<polyline points="410,372 410,420" fill="none" stroke="#586b87" stroke-width="3" marker-end="url(#arrow)"/>
+<polyline points="410,502 410,550" fill="none" stroke="#586b87" stroke-width="3" marker-end="url(#arrow)"/>
+<polygon points="410.0,700 670,760.0 410.0,820 150,760.0" fill="#eaf0ff" stroke="#a9badc" stroke-width="2"/>
+<text x="410.0" y="767.0" fill="#18273f" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle">有词法匹配吗？</text>
+<polyline points="410,632 410,700" fill="none" stroke="#586b87" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="795" y="715" width="340" height="90" rx="14" fill="#fff1df" stroke="#d7ba91" stroke-width="2"/>
+<text x="965.0" y="750.0" fill="#18273f" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle">返回无匹配依据</text>
+<text x="965.0" y="784.0" fill="#18273f" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle">sources 为空</text>
+<polyline points="670,760 795,760" fill="none" stroke="#586b87" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="718" y="745" fill="#586b87" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="start">否</text>
+<rect x="100" y="890" width="620" height="90" rx="14" fill="#e5f4ec" stroke="#a1cbb3" stroke-width="2"/>
+<text x="410.0" y="942.0" fill="#18273f" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle">Top 3 原文 + 文档名 + 块序号</text>
+<polyline points="410,820 410,890" fill="none" stroke="#586b87" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="430" y="861" fill="#586b87" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="start">是</text>
+<rect x="100" y="1050" width="620" height="90" rx="14" fill="#e5f4ec" stroke="#a1cbb3" stroke-width="2"/>
+<text x="410.0" y="1102.0" fill="#18273f" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle">摘录回答，保留 [1] 等来源引用</text>
+<polyline points="410,980 410,1050" fill="none" stroke="#586b87" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="790" y="1045" width="350" height="100" rx="14" fill="#edf0f5" stroke="#bdc6d3" stroke-width="2"/>
+<text x="965.0" y="1085.0" fill="#18273f" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle">可选 --live 模型生成</text>
+<text x="965.0" y="1119.0" fill="#18273f" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle">本轮未验证</text>
+<polyline points="720,935 965,935 965,1045" fill="none" stroke="#586b87" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="60" y="1220" fill="#18273f" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="start">已验证：503 检索、知识更新/撤回、无依据拒答、SQL 文本输入</text>
+</svg>
